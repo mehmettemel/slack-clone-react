@@ -1,0 +1,29 @@
+.sidebarOption {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding-left: 2px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+    background-color: $slack-color-dark;
+  }
+
+  & > h3 {
+    font-weight: 500;
+  }
+
+  &__icon {
+    padding: 10px;
+    font-size: 15px !important;
+  }
+
+  &__channel {
+    padding: 10px 0;
+  }
+
+  &__hash {
+    padding: 10px;
+  }
+}

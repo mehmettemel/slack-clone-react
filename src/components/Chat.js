@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import '../assets/styles/main.scss'
+
 import { useParams } from 'react-router-dom'
 import StarBorderIcon from '@material-ui/icons/StarBorder'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 import db from '../firebase'
 import Message from './Message'
+import ChatInput from './ChatInput'
 
 const Chat = () => {
   let { roomId } = useParams()
@@ -54,6 +55,8 @@ const Chat = () => {
           />
         ))}
       </div>
+
+      <ChatInput channelName={roomDetails?.name} channelId={roomId} />
 
       {/* http://localhost:3001/room/temel */}
       {/* <h2>You re in the {roomId} room</h2> */}
